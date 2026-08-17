@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.adwave.parser</string>
+  <key>WorkingDirectory</key>
+  <string>/ABSOLUTE/PATH/TO/adwave-parser</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/local/bin/node</string>
+    <string>/ABSOLUTE/PATH/TO/adwave-parser/src/cli.js</string>
+    <string>sync</string>
+    <string>--entities</string>
+    <string>all</string>
+    <string>--days</string>
+    <string>7</string>
+  </array>
+  <key>StartInterval</key>
+  <integer>21600</integer>
+  <key>StandardOutPath</key>
+  <string>/ABSOLUTE/PATH/TO/adwave-parser/logs/launchd.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/ABSOLUTE/PATH/TO/adwave-parser/logs/launchd.err.log</string>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>ADWAVE_TOKEN_FILE</key>
+    <string>/ABSOLUTE/PATH/TO/adwave-parser/.secrets/tokens.json</string>
+  </dict>
+</dict>
+</plist>

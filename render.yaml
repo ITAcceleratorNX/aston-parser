@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: aston-api
+    runtime: node
+    plan: free
+    region: frankfurt
+    rootDir: aston-platform/backend
+    buildCommand: npm install && cd ../frontend && npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ADMIN_LOGIN
+        value: admin
+      - key: ADMIN_PASSWORD
+        value: aston123

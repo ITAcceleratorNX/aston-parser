@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.env
+.env.local
+.secrets/
+adwave-start/data/runs/
+adwave-start/data/*.sqlite
+adwave-start/logs/
+.DS_Store
+*.log
+.vercel
